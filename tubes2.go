@@ -135,8 +135,8 @@ func detailPerushaan(data tabPerusahaan, nPerushaan int) {
 				} else {
 					fmt.Println("8. Berikut adalah data tim perusahaan ", data[nomor-1].namaPerusahaan)
 					for i := 0; i < data[nomor-1].jumlahOrang; i++ {
-						fmt.Println("- Nama: ", data[nomor-1].orang[i].nama)
-						fmt.Println("Peran: ", data[nomor-1].orang[i].peran)
+						fmt.Printf("%-10s %s\n", "- Nama:", data[nomor-1].orang[i].nama)
+						fmt.Printf("%-10s %s\n", "  Peran:", data[nomor-1].orang[i].peran)
 					}
 				}
 				if data[nomor-1].banyakBarang == 0 {
@@ -145,7 +145,7 @@ func detailPerushaan(data tabPerusahaan, nPerushaan int) {
 				} else {
 					fmt.Println("9. Berikut adalah daftar produk perusahaan ", data[nomor-1].namaPerusahaan)
 					for i := 0; i < data[nomor-1].banyakBarang; i++ {
-						fmt.Printf("%d. nama: %s harga: %d\n", i+1, data[nomor-1].barang[i].nama, data[nomor-1].barang[i].harga)
+						fmt.Printf("%3d. nama: %-25s harga: %12d\n", i+1, data[nomor-1].barang[i].nama, data[nomor-1].barang[i].harga)
 						fmt.Println()
 					}
 				}
@@ -813,4 +813,6 @@ func cariBidangPerusahaan(P tabPerusahaan, nPerusahaan int) {
 	if !ada {
 		fmt.Println("Maaf bidang perusahaan tidak ditemukan")
 	}
+	fmt.Printf("Jumlah perusahaan berdasarkan bidang %s: %d ", pilih, nomorUrut)
+	fmt.Println()
 }
