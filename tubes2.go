@@ -44,6 +44,7 @@ type tabInvestor [100]investor
 type tabOwner [100]owner
 
 //prosedur untuk menampilkan tampilan awal pada program
+//Fitur: menampilkan tampilan awal program pada User untuk memilih ataupun keluar aplikasi
 func menu() {
 	fmt.Println("╔═══════════════════════════════════╗")
 	fmt.Println("║        Halo Selamat Datang        ║")
@@ -57,6 +58,7 @@ func menu() {
 }
 
 //prosedur untuk menampilkan opsi menu pada owner maupun investor
+//Fitur: memberikan User opsi untuk mendaftarkan akun baru atau masuk dengan akun yang sudah terdaftar
 func menuLogin() {
 	fmt.Println("╔═══════════════════════════════════╗")
 	fmt.Println("║        Halo Selamat Datang        ║")
@@ -70,6 +72,7 @@ func menuLogin() {
 }
 
 //prosedur untuk menampilkan menu investor
+//Fitur: menyediakan navigasi bagi investor untuk melihat, mengurutkan, dan mencari data perusahaan
 func menuInvestor(investor tabInvestor, data tabPerusahaan, nPerusahaan int) {
 	var pilih int
 	aman := true
