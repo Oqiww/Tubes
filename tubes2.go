@@ -73,7 +73,7 @@ func menuLogin() {
 
 //prosedur untuk menampilkan menu investor
 //Fitur: menyediakan navigasi bagi investor untuk melihat, mengurutkan, dan mencari data perusahaan
-func menuInvestor(investor tabInvestor, data tabPerusahaan, nPerusahaan int) {
+func menuInvestor(data tabPerusahaan, nPerusahaan int) {
 	var pilih int
 	aman := true
 	for aman {
@@ -108,6 +108,7 @@ func menuInvestor(investor tabInvestor, data tabPerusahaan, nPerusahaan int) {
 }
 
 //prosedur untuk menampilkan data pada perusahaan yang dipilih (ada opsi dipilih maupun tidak)
+//Fitur investor: memungkinkan investor untuk melihat infor lengkap suatau perusahaan
 func detailPerushaan(data tabPerusahaan, nPerushaan int) {
 	var pilih string
 	var nomor int
@@ -163,6 +164,7 @@ func detailPerushaan(data tabPerusahaan, nPerushaan int) {
 }
 
 //prosedur untuk menampilkan menu owner
+//Fitur owner: menyediakan navigasi bagi owner untuk mengelola data perusahaan miliknya
 func menuOwner(owner tabOwner, data *tabPerusahaan, nPerusahaan *int, ownerID int) {
 	var pilih int
 	aman := true
@@ -223,6 +225,7 @@ func menuOwner(owner tabOwner, data *tabPerusahaan, nPerusahaan *int, ownerID in
 }
 
 //fungsi main utama pada program
+//fitur: titik masuk aplikasi, menangani pemilihan pengguna (investor/owner), login/signup, dan navigasi menu
 func main() {
 	var pilihan, login, nOwner, nInvestor, nPerusahaan int
 	var dataOwner tabOwner
@@ -268,7 +271,7 @@ func main() {
 				case 2:
 					index := loginInvestor(dataInvestor, nInvestor)
 					if index != -1 {
-						menuInvestor(dataInvestor, dataPerusahaan, nPerusahaan)
+						menuInvestor(dataPerusahaan, nPerusahaan)
 						investorLogin = true
 					}
 				case 3:
@@ -292,6 +295,7 @@ func main() {
 }
 
 //prosedur untuk owner melakukan signup akun
+//Fitur: registrasi akun baru untuk owner, serta memastikan username unik dan kapasitas belum penuh
 func signUpOwner(I *tabOwner, nOwner *int) {
 	var nama, pass string
 	aman := true
@@ -320,6 +324,7 @@ func signUpOwner(I *tabOwner, nOwner *int) {
 }
 
 //fungsi untuk owner melakukan login owner dengan sequential search dan mengembalikan index owner
+//Fitur: mengautentikasi Owner berdasarkan username dan password yang telah didaftarkan
 func loginOwner(I tabOwner, nOwner int) int {
 	var nama, pass string
 	if nOwner == 0 {
@@ -345,6 +350,7 @@ func loginOwner(I tabOwner, nOwner int) int {
 }
 
 //prosedur untuk inverstor melakukan sign up
+//Fitur: registrasi akun baru untuk investor, mirip dengan signup owner
 func signUpInvestor(I *tabInvestor, nInvestor *int) {
 	var nama, pass string
 	aman := true
@@ -373,6 +379,7 @@ func signUpInvestor(I *tabInvestor, nInvestor *int) {
 }
 
 //fungsi investor untuk melakukan login invsestor dengan sequential search dan mengembalikan index investor
+//Fitur: mengautentikasi Investor, sama dengan loginOwner
 func loginInvestor(I tabInvestor, nInvestor int) int {
 	var nama, pass string
 
@@ -398,6 +405,7 @@ func loginInvestor(I tabInvestor, nInvestor int) int {
 }
 
 //prosedur untuk menghapus data perusahaan
+//Fitur owner: memungkinkan owner untuk menghapus perusahaan miliknya
 func hapusDataPerusahaan(P *tabPerusahaan, nPerusahaan *int, ownerID int) {
 	if *nPerusahaan == 0 {
 		fmt.Println("Maaf belum ada perusahaan anda yang terdaftar")
@@ -429,6 +437,7 @@ func hapusDataPerusahaan(P *tabPerusahaan, nPerusahaan *int, ownerID int) {
 }
 
 //prosedur untuk mengisi data perusahaan
+//Fitur owner: menambahkan perusahaan baru ke sistem, diasosiasikan dengan ownerID yang melaukan input
 func isiDataPerusahaan(P *tabPerusahaan, nPerusahaan *int, ownerID int) {
 	var masuk string
 	var jumlah int = 0
@@ -475,6 +484,7 @@ func isiDataPerusahaan(P *tabPerusahaan, nPerusahaan *int, ownerID int) {
 }
 
 //prosedur untuk mengisi produk perusahaan
+//Fitur owner: memungkinkan owner untuk menambahkan satu produk maupun lebih ke perusahan yang sudah dimiliki owner
 func produkPerusahaan(P *perusahaan, ownerID int) {
 	if P.ownerID != ownerID {
 		fmt.Println("Maaf anda bukan pemilik perusahaan ini")
@@ -499,6 +509,7 @@ func produkPerusahaan(P *perusahaan, ownerID int) {
 }
 
 //prosedur untuk mengecek nama perusahaan yang terdaftar
+//Fitur: menampilkan nama-nama perusahaan yang terdaftar
 func cekDataPerusahaan(P tabPerusahaan, nPerusahaan int) {
 	if nPerusahaan == 0 {
 		fmt.Println("Data perusahaan belum tersedia")
@@ -515,6 +526,7 @@ func cekDataPerusahaan(P tabPerusahaan, nPerusahaan int) {
 }
 
 //prosedur untuk mengubah data perusahaan
+//Fitur owner: mengubah data perusahaan pada owner yang memiliki perusahaan tersebut
 func ubahDataPerusahaan(P *perusahaan, nPerusahaan int, ownerID int) {
 	if P.ownerID != ownerID {
 		fmt.Println("Maaf anda bukan pemilik perusahaan ini")
@@ -567,6 +579,7 @@ func ubahDataPerusahaan(P *perusahaan, nPerusahaan int, ownerID int) {
 }
 
 //prosedur untuk menampilkan menu urutkanperusahaan
+//Fitur investor: memberikan opsi untuk mengurutkan daftar perusahaan
 func urutkanPerusahaan(P *tabPerusahaan, nPerusahaan int) {
 	if nPerusahaan == 0 {
 		fmt.Println("Data perusahaan belum tersedia")
@@ -612,6 +625,7 @@ func urutkanPerusahaan(P *tabPerusahaan, nPerusahaan int) {
 }
 
 //prosedur untuk mengurutkan perusahaan dan menampilkan nama dan tanggal berdiri perusahaan berdasarkan tahun secara ASC dengan insertion sort
+//Fitur investor: mengurutkan perusahaan berdasarkan tahun berdiri perusahaan secara ASC
 func urutkanTahunTermuda(P *tabPerusahaan, nPerusahaan int) {
 	for i := 1; i < nPerusahaan; i++ {
 		j := i
@@ -628,6 +642,7 @@ func urutkanTahunTermuda(P *tabPerusahaan, nPerusahaan int) {
 }
 
 ////prosedur untuk mengurutkan perusahaan dan menampilkan nama dan tanggal berdiri perusahaan berdasarkan tahun secara DESC dengan insertion sort
+//Fitur investor: mengurutkan perusahaan berdasarkan tahun berdiri perusahaan secara DESC
 func urutkanTahunTerlama(P *tabPerusahaan, nPerusahaan int) {
 	for i := 1; i < nPerusahaan; i++ {
 		j := i
@@ -643,6 +658,7 @@ func urutkanTahunTerlama(P *tabPerusahaan, nPerusahaan int) {
 }
 
 ////prosedur untuk mengurutkan perusahaan dan menampilkan nama dan pemasukan perusahaan berdasarkan pemasukan secara DESC dengan insertion sort
+//Fitur investor: mengurutkan perusahaan berdasarkan pemasukan terbesar
 func urutkanTerbesar(P *tabPerusahaan, nPerusahaan int) {
 	for i := 0; i < nPerusahaan; i++ {
 		max := i
@@ -661,6 +677,7 @@ func urutkanTerbesar(P *tabPerusahaan, nPerusahaan int) {
 }
 
 //////prosedur untuk mengurutkan perusahaan dan menampilkan nama dan pemasukan perusahaan berdasarkan pemasukan secara ASC dengan insertion sort
+//Fitur investor: mengurutkan perusahaan berdasarkan pemasukan terekcil
 func urutkanTerkecil(P *tabPerusahaan, nPerusahaan int) {
 	for i := 0; i < nPerusahaan; i++ {
 		min := i
@@ -679,6 +696,7 @@ func urutkanTerkecil(P *tabPerusahaan, nPerusahaan int) {
 }
 
 //prosedur untuk menampilkan pemasukan terbesar perusahaan dengan findmax
+//Fitur investor: mencari perusahaan dengan pemasukan yang paling besar
 func pemasukkanTerbesar(P tabPerusahaan, nPerusahaan int) {
 	max := 0
 	for i := 1; i < nPerusahaan; i++ {
@@ -691,6 +709,7 @@ func pemasukkanTerbesar(P tabPerusahaan, nPerusahaan int) {
 }
 
 ////prosedur untuk menampilkan pemasukan terbesar perusahaan dengan findmin
+//Fitur investor: mencari perusahaan dengan pemasuk paling kecil
 func pemasukkanTerkecil(P tabPerusahaan, nPerusahaan int) {
 	min := 0
 	for i := 1; i < nPerusahaan; i++ {
@@ -703,6 +722,7 @@ func pemasukkanTerkecil(P tabPerusahaan, nPerusahaan int) {
 }
 
 //prodesur untuk menampilkna menu untuk mencari perusahaan
+//Fitur investor: memungkinkan investor untuk mencari perusahaan berdasarkan nama maupun bidang
 func cariPerusahaan(P tabPerusahaan, nPerusahaan int) {
 	if nPerusahaan == 0 {
 		fmt.Println("Data perusahaan belum tersedia")
@@ -770,6 +790,7 @@ func cariPerusahaan(P tabPerusahaan, nPerusahaan int) {
 }
 
 //prosedur untuk mencari nama perusahaan dengan algoritma binary search
+//Fitur investor: mencari perusahaan berdasarkan nama yang diinginkan oleh investor
 func cariNamaPerusahaan(P *tabPerusahaan, nPerusahaan int, x string) int {
 	urutkanNama(P, nPerusahaan)
 	low := 0
@@ -788,6 +809,7 @@ func cariNamaPerusahaan(P *tabPerusahaan, nPerusahaan int, x string) int {
 }
 
 //prosedur untuk mengurutkan perusahaan berdasarkan nama dengan algoritma selection sort
+//Fitur investor: mengurutkan perusahaan berdasarkan nama untuk fitur cari nama perusahaan
 func urutkanNama(P *tabPerusahaan, nPerusahaan int) {
 	for i := 0; i < nPerusahaan; i++ {
 		min := i
@@ -802,6 +824,7 @@ func urutkanNama(P *tabPerusahaan, nPerusahaan int) {
 }
 
 //prosedur untuk mencari bidang perusahaan dengan algoritma sequential search
+//Fitur investor: mencari bidang perusahaan dan menampilkan jumlah perusahaan sesuai bidang
 func cariBidangPerusahaan(P tabPerusahaan, nPerusahaan int) {
 	var nomorUrut int
 	var pilih string
