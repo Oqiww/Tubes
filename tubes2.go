@@ -204,7 +204,11 @@ func menuOwner(owner tabOwner, data *tabPerusahaan, nPerusahaan *int, ownerID in
 				var mau int
 				fmt.Print("Silahkan pilih perusahaan yang ingin diubah: ")
 				fmt.Scan(&mau)
-				ubahDataPerusahaan(&data[mau-1], *nPerusahaan, ownerID)
+				if mau > *nPerusahaan {
+					fmt.Println("Maaf pilihan tidak valid")
+				} else {
+					ubahDataPerusahaan(&data[mau-1], *nPerusahaan, ownerID)
+				}
 			}
 		case 5:
 			return
