@@ -25,18 +25,18 @@ Tambahkan dan perbarui informasi penting startup Anda dengan mudah:
 * **Tahun Berdiri**: Catat jejak sejarah perusahaan (format: `YYYY`, contoh: `2020`).
 * **Lokasi Perusahaan**: Alamat fisik atau operasional utama startup Anda.
 * **Pemasukan & Pengeluaran**: Pantau kesehatan finansial perusahaan secara rinci.
-* **Data Tim Perusahaan**: Tambahkan nama dan peran anggota kunci tim Anda (format: `Nama - Peran`, contoh: `Budi - CEO`). Informasi ini bersifat **opsional** dan bisa dikosongkan.
+* **Data Tim Perusahaan**: Tambahkan nama dan peran anggota kunci tim Anda. Informasi ini bersifat **opsional** dan bisa dikosongkan.
 
 ### 2. Tambahkan & Kelola Produk 📦
 Fitur ini memungkinkan Anda untuk menambahkan produk baru yang ditawarkan oleh perusahaan Anda.
 * **Catatan**: Fitur ini hanya dapat digunakan untuk perusahaan yang Anda miliki dan terdaftar di bawah akun Anda. Tidak dapat dijalankan jika belum ada perusahaan yang terdaftar sama sekali.
 
 ### 3. Hapus Perusahaan 👋
-Memberikan Anda fleksibilitas untuk menghapus data perusahaan yang sudah tidak relevan dari sistem.
+Memberikan Anda fleksibilitas untuk menghapus data perusahaan yang ingin anda hapus.
 * **Catatan**: Fitur ini hanya aktif jika Anda memiliki setidaknya satu perusahaan yang terdaftar.
 
 ### 4. Ubah Detail Perusahaan ✏️
-Dunia startup bergerak cepat! Anda dapat dengan leluasa mengubah seluruh data perusahaan yang terdaftar di bawah kepemilikan Anda.
+Anda dapat dengan leluasa mengubah seluruh data perusahaan yang terdaftar di bawah kepemilikan Anda.
 * **Catatan**: Fitur ini memerlukan setidaknya satu perusahaan terdaftar untuk dapat beroperasi.
 
 ---
@@ -62,9 +62,9 @@ Mempermudah analisis data dengan kemampuan untuk mengurutkan daftar perusahaan b
     * **Pemasukan Terkecil**: Mengidentifikasi perusahaan dengan pemasukan terendah untuk studi lebih lanjut.
 
 ### 3. Cari Perusahaan Spesifik 🎯
-Temukan startup impian Anda dengan fitur pencarian yang akurat dan efisien:
+Temukan perusahaan yang Anda inginkan dengan fitur pencarian yang akurat dan efisien:
 * **Berdasarkan Nama Perusahaan**: Cukup ketik nama perusahaan, dan sistem akan menampilkan seluruh detailnya jika ditemukan.
-* **Berdasarkan Bidang Industri**: Cari perusahaan berdasarkan sektor operasionalnya. Sistem akan menampilkan daftar nama perusahaan di bidang tersebut, lengkap dengan **jumlah total perusahaan** yang terdaftar di bidang yang sama, memberikan wawasan pasar.
+* **Berdasarkan Bidang Industri**: Cari perusahaan berdasarkan bidangnya. Sistem akan menampilkan daftar nama perusahaan di bidang tersebut, lengkap dengan **jumlah total perusahaan** yang terdaftar di bidang yang sama, memberikan wawasan pasar.
 
 ---
 
