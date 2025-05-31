@@ -1,8 +1,7 @@
 # Aplikasi Manajemen Startup Sederhana 🚀
 
 [![Made with Go](https://img.shields.io/badge/Made%20with-Go-00ADD8.svg?logo=go&logoColor=white)](https://go.dev/)
-Aplikasi ini adalah sistem manajemen data perusahaan berbasis **Command Line Interface (CLI)** yang dirancang secara intuitif menggunakan **Go (Golang)** untuk mempermudah **Owner** (pemilik perusahaan) dan **Investor** (calon penanam modal) dalam mengakses serta mengelola informasi perusahaan rintisan. Dengan fokus pada efisiensi dan performa, aplikasi ini menjadi alat krusial bagi ekosistem startup Anda.
-
+Aplikasi ini adalah sistem manajemen data perusahaan berbasis **Command Line Interface (CLI)** yang dirancang secara intuitif menggunakan **Go (Golang)** untuk mempermudah **Owner** (pemilik perusahaan) dan **Investor** (calon penanam modal) dalam mengakses serta mengelola informasi perusahaan.
 ---
 
 ## ✨ Fitur Utama
