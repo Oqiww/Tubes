@@ -7,7 +7,7 @@ Aplikasi ini adalah sistem manajemen data perusahaan berbasis **Command Line Int
 ## ✨ Fitur Utama
 
 ### 1. Akses Aman: Login & Sign Up
-Keamanan data adalah prioritas utama. Setiap pengguna, baik **Owner** maupun **Investor**, **wajib** melakukan proses pendaftaran (`Sign Up`) dan masuk (`Login`) ke akun mereka terlebih dahulu. Ini memastikan personalisasi akses dan melindungi informasi sensitif perusahaan.
+Keamanan data adalah prioritas utama. Setiap pengguna, baik **Owner** maupun **Investor**, **wajib** melakukan proses pendaftaran (`Sign Up`) dan masuk (`Login`) ke akun mereka terlebih dahulu. Ini memastikan penggunaan aplikasi yang lebih aman dan terstruktur.
 
 ### 2. Navigasi Intuitif: Menu Utama
 Setelah berhasil login, Anda akan disambut dengan `Menu Utama` yang jelas. Menu ini berisi daftar lengkap fitur yang dapat Anda akses, disesuaikan secara otomatis berdasarkan peran Anda (Owner atau Investor). Tersedia juga opsi untuk keluar dari aplikasi kapan saja.
@@ -16,7 +16,7 @@ Setelah berhasil login, Anda akan disambut dengan `Menu Utama` yang jelas. Menu 
 
 ## 💼 Fitur untuk Owner
 
-Sebagai nahkoda startup, Anda memiliki kendali penuh atas informasi dan operasional perusahaan Anda:
+Sebagai Owner perusahaan, Anda memiliki kendali penuh atas informasi dan operasional perusahaan Anda:
 
 ### 1. Kelola Data Perusahaan 📝
 Tambahkan dan perbarui informasi penting startup Anda dengan mudah:
