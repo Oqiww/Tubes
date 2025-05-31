@@ -468,7 +468,7 @@ func isiDataPerusahaan(P *tabPerusahaan, nPerusahaan *int, ownerID int) {
 		fmt.Printf("Masukkan nama orang ke-%d: ", jumlah+1)
 		fmt.Scan(&P[*nPerusahaan].orang[jumlah].nama)
 
-		fmt.Printf("Masukkan perang orang ke-%d: ", jumlah+1)
+		fmt.Printf("Masukkan peran orang ke-%d: ", jumlah+1)
 		fmt.Scan(&P[*nPerusahaan].orang[jumlah].peran)
 
 		jumlah++
@@ -564,7 +564,7 @@ func ubahDataPerusahaan(P *perusahaan, nPerusahaan int, ownerID int) {
 		fmt.Printf("Masukkan nama orang ke-%d: ", jumlah+1)
 		fmt.Scan(&P.orang[jumlah].nama)
 
-		fmt.Printf("Masukkan perang orang ke-%d: ", jumlah+1)
+		fmt.Printf("Masukkan peran orang ke-%d: ", jumlah+1)
 		fmt.Scan(&P.orang[jumlah].peran)
 
 		jumlah++
@@ -657,13 +657,13 @@ func urutkanTahunTerlama(P *tabPerusahaan, nPerusahaan int) {
 	}
 }
 
-////prosedur untuk mengurutkan perusahaan dan menampilkan nama dan pemasukan perusahaan berdasarkan pemasukan secara DESC dengan insertion sort
+////prosedur untuk mengurutkan perusahaan dan menampilkan nama dan pemasukan perusahaan berdasarkan pemasukan secara DESC dengan selection sort
 //Fitur investor: mengurutkan perusahaan berdasarkan pemasukan terbesar
 func urutkanTerbesar(P *tabPerusahaan, nPerusahaan int) {
 	for i := 0; i < nPerusahaan; i++ {
 		max := i
 		for j := i + 1; j < nPerusahaan; j++ {
-			if P[i].pemasukan < P[j].pemasukan {
+			if P[j].pemasukan > P[max].pemasukan {
 				max = j
 			}
 		}
@@ -676,13 +676,13 @@ func urutkanTerbesar(P *tabPerusahaan, nPerusahaan int) {
 	}
 }
 
-//////prosedur untuk mengurutkan perusahaan dan menampilkan nama dan pemasukan perusahaan berdasarkan pemasukan secara ASC dengan insertion sort
+//////prosedur untuk mengurutkan perusahaan dan menampilkan nama dan pemasukan perusahaan berdasarkan pemasukan secara ASC dengan selection sort
 //Fitur investor: mengurutkan perusahaan berdasarkan pemasukan terekcil
 func urutkanTerkecil(P *tabPerusahaan, nPerusahaan int) {
 	for i := 0; i < nPerusahaan; i++ {
 		min := i
 		for j := i + 1; j < nPerusahaan; j++ {
-			if P[i].pemasukan > P[j].pemasukan {
+			if P[j].pemasukan < P[min].pemasukan {
 				min = j
 			}
 		}
