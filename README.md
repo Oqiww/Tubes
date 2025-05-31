@@ -1,8 +1,7 @@
 # Aplikasi Manajemen Startup Sederhana 🚀
 
-[![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-Aplikasi ini adalah sistem manajemen data perusahaan berbasis **Command Line Interface (CLI)** yang dirancang secara intuitif untuk mempermudah **Owner** (pemilik perusahaan) dan **Investor** (calon penanam modal) dalam mengakses serta mengelola informasi perusahaan rintisan. Dengan fokus pada efisiensi dan kemudahan penggunaan, aplikasi ini menjadi alat krusial bagi ekosistem startup Anda.
+[![Made with Go](https://img.shields.io/badge/Made%20with-Go-00ADD8.svg?logo=go&logoColor=white)](https://go.dev/)
+Aplikasi ini adalah sistem manajemen data perusahaan berbasis **Command Line Interface (CLI)** yang dirancang secara intuitif menggunakan **Go (Golang)** untuk mempermudah **Owner** (pemilik perusahaan) dan **Investor** (calon penanam modal) dalam mengakses serta mengelola informasi perusahaan rintisan. Dengan fokus pada efisiensi dan performa, aplikasi ini menjadi alat krusial bagi ekosistem startup Anda.
 
 ---
 
@@ -72,7 +71,7 @@ Temukan startup impian Anda dengan fitur pencarian yang akurat dan efisien:
 
 ## 🛠️ Cara Menggunakan Aplikasi
 
-Ikuti langkah-langkah sederhana ini untuk menjalankan dan menggunakan Aplikasi Manajemen Startup Sederhana:
+Ikuti langkah-langkah sederhana ini untuk mengunduh, membangun, dan menjalankan Aplikasi Manajemen Startup Sederhana yang dibuat dengan Go:
 
 1.  **Klon Repositori**:
     Buka terminal atau command prompt Anda dan jalankan perintah berikut untuk mengunduh kode proyek:
@@ -80,16 +79,18 @@ Ikuti langkah-langkah sederhana ini untuk menjalankan dan menggunakan Aplikasi M
     git clone [URL_REPOSITORI_ANDA]
     cd nama-folder-aplikasi # Ganti dengan nama folder hasil clone
     ```
-2.  **Instalasi Dependensi (jika ada)**:
-    Jika proyek Anda memerlukan library Python tambahan (misal: untuk database atau data handling), Anda dapat menginstalnya dari file `requirements.txt`:
+2.  **Bangun Aplikasi**:
+    Komompilasi kode sumber Go menjadi berkas yang dapat dieksekusi:
     ```bash
-    pip install -r requirements.txt
+    go build -o startup-manager
     ```
-    *(Lewati langkah ini jika aplikasi Anda tidak memiliki dependensi eksternal selain built-in Python)*
+    *(`startup-manager` akan menjadi nama eksekusi program Anda. Anda bisa menggantinya jika mau.)*
 3.  **Jalankan Aplikasi**:
-    Mulai aplikasi CLI dengan perintah:
+    Mulai aplikasi CLI yang sudah dibangun:
     ```bash
-    python main.py # Ganti 'main.py' jika nama file utama Anda berbeda
+    ./startup-manager # Untuk Linux/macOS
+    # atau
+    .\startup-manager.exe # Untuk Windows
     ```
 4.  **Ikuti Petunjuk CLI**:
     Setelah aplikasi berjalan, ikuti instruksi yang ditampilkan di terminal untuk melakukan `Sign Up`, `Login`, dan mengakses berbagai fitur yang tersedia.
@@ -98,7 +99,7 @@ Ikuti langkah-langkah sederhana ini untuk menjalankan dan menggunakan Aplikasi M
 
 ## 🤝 Kontribusi
 
-Kami sangat menghargai kontribusi dari komunitas! Jika Anda tertarik untuk membantu mengembangkan atau memperbaiki aplikasi ini, silakan ikuti panduan kontribusi berikut:
+Kami sangat menghargai kontribusi dari komunitas Go! Jika Anda tertarik untuk membantu mengembangkan atau memperbaiki aplikasi ini, silakan ikuti panduan kontribusi berikut:
 
 1.  **Fork** repositori ini.
 2.  **Buat branch baru** untuk fitur atau perbaikan Anda:
@@ -116,13 +117,6 @@ Kami sangat menghargai kontribusi dari komunitas! Jika Anda tertarik untuk memba
     git push origin fitur/nama-fitur-anda
     ```
 5.  Buat **Pull Request (PR)** baru ke repositori utama kami. Jelaskan perubahan yang Anda buat secara rinci.
-
----
-
-## 📜 Lisensi
-
-Proyek ini dilisensikan di bawah **Lisensi MIT**. Ini berarti Anda bebas untuk menggunakan, memodifikasi, dan mendistribusikan kode ini untuk tujuan apa pun, asalkan Anda menyertakan pemberitahuan lisensi yang sesuai.
-Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
 
 ---
 
